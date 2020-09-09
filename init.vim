@@ -12,6 +12,8 @@ Plug 'vimjas/vim-python-pep8-indent' " python indentation
 Plug 'lervag/vimtex' " tex support
 Plug 'pbondoer/vim-42header'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } " live preview latex files with :LLPStartPreview
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 " python with virtualenv support
@@ -61,6 +63,10 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " disable latex-box included with vim-polyglot (conflicts with vimtex)
 let g:polyglot_disabled = ['latex']
+
+"Deoplete setup
+"make sure you have pip3 install pynvim
+let g:deoplete#enable_at_startup = 1
 
 " set tab as 4 spaces
 set tabstop=4
